@@ -1,8 +1,10 @@
 <template name="penseesTemplate">
+	<h1>Liste de mes pensées</h1>
     <ul>
     {{#each pensees}}
     <li>
-        {{title}}
+        <h4>{{today}}</h4>
+        {{texte}}
     </li>
     {{/each}}
     </ul>

@@ -11,11 +11,15 @@ Template.penseeForm.events = {
  
         // create the new pensee
         var newPensee = {
-            title: tmpl.find("#title").value,
+            today: tmpl.find("#today").value,
             texte: tmpl.find("#texte").value
         };
  
-        // add the movie to the db
+        // add the pensee to the db
         Pensees.insert(newPensee);
     }
 };
+
+Template.main.showMember = function() {
+    return Session.get("showMember");
+  };
